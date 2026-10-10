@@ -1255,4 +1255,46 @@ export default function TechnologicLanding() {
       </footer>
     </div>
   );
+}jsx
+export default function TechnologicLanding() {
+  return (
+    <div style={{ backgroundColor: '#0f172a', color: '#f8fafc', minHeight: '100vh', fontFamily: 'system-ui, sans-serif', padding: '120px 20px 60px 20px' }}>
+      
+      {/* Structural Branding Header */}
+      <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+        <h1 style={{ fontSize: '42px', fontWeight: '800', marginBottom: '16px', background: 'linear-gradient(to right, #fff, #38bdf8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+          Technologic Infrastructure Hub
+        </h1>
+        <p style={{ color: '#94a3b8', fontSize: '18px' }}>Automate • Scale • Grow</p>
+      </div>
+
+      {/* Grid Track 1: Global Stats Counter */}
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '20px', maxWidth: '1000px', margin: '0 auto 80px auto' }}>
+        {stats.map((item, index) => (
+          <div key={index} style={{ backgroundColor: '#1e293b', padding: '24px', borderRadius: '12px', border: '1px solid #334155', textAlign: 'center' }}>
+            <div style={{ fontSize: '32px', fontWeight: '800', color: '#38bdf8', marginBottom: '8px' }}>{item.value}</div>
+            <div style={{ color: '#94a3b8', fontSize: '14px', fontWeight: '500' }}>{item.label}</div>
+          </div>
+        ))}
+      </div>
+
+      {/* Grid Track 2: Core Engineering Capabilities */}
+      <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+        <h2 style={{ fontSize: '28px', marginBottom: '32px', textAlign: 'center' }}>System Capabilities Blueprint</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
+          {features.map((feat, index) => (
+            <div key={index} style={{ backgroundColor: '#1e293b', padding: '30px', borderRadius: '16px', border: '1px solid #334155', position: 'relative' }}>
+              <span style={{ position: 'absolute', top: '20px', right: '20px', backgroundColor: 'rgba(56, 189, 248, 0.1)', color: '#38bdf8', padding: '4px 10px', borderRadius: '8px', fontSize: '12px', fontWeight: '700' }}>
+                {feat.badge}
+              </span>
+              <h3 style={{ fontSize: '20px', color: '#f1f5f9', marginBottom: '12px', fontWeight: '700' }}>{feat.title}</h3>
+              <p style={{ color: '#94a3b8', fontSize: '15px', lineHeight: '1.6' }}>{feat.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  );
 }
+Compose
